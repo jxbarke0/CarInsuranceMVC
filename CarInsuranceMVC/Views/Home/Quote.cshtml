@@ -1,0 +1,53 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h3>Please complete all of the following fields to receive your free quote!</h3>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("GetQuote", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <div class="form-group col-md-6">
+                    <label>First Name: <input name="FirstName" type="text" class="form-control" placeholder="First Name" /></label>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Last Name: <input name="LastName" type="text" class="form-control" placeholder="Last Name" /></label>
+                </div>
+                <div class="form-group col-md-12">
+                    <label>Email Address: <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" /></label>
+                </div>
+                <div class="form-group col-md-12">
+                    <label>Date of Birth: <input name="DateOfBirth" type="datetime" class="form-control" placeholder="Date of Birth" /></label>
+                </div>
+                <div class="form-group col-md-12">
+                    <label>Vehicle Year:<input name="CarYear" type="text" class="form-control" placeholder="Your Vehicle's Year" /></label>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Vehicle Make: <input name="CarMake" type="text" class="form-control" placeholder="Your Vehicle's Make" /></label>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Vehicle Model: <input name="CarModel" type="text" class="form-control" placeholder="Your Vehicle's Model" /></label>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <p><strong>Have you ever received a DUI?</strong></p>
+                    <label for="DUI"><input name="DUI" type="radio" class="form-control radio-inline" value="true"/>Yes</label>
+                    <label for="DUI"><input name="DUI" type="radio" class="form-control radio-inline" value="false"checked /> No</label>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <label>How many speeding tickets have you received?<input name="TicketCount" type="number" class="form-control" value=0 placeholder="0" /></label>
+                </div>
+                <div class="form-group col-md-12">
+                    <p><strong>Would you like a quote for full coverage or liability insurance only?</strong></p>
+                    <label for="Coverage"><input name="Coverage" type="radio" class="form-control radio-inline" value="true" checked/>Full Coverage</label>
+                    <label for="Coverage"><input name="Coverage" type="radio" class="form-control radio-inline" value="false"/>Liability Only</label>
+                </div>
+                <div class="col-md-8">
+                    <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>

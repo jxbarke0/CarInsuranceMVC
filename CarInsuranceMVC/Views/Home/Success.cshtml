@@ -1,0 +1,19 @@
+﻿@model CarInsuranceMVC.Models.QuoteModel
+
+@{
+    ViewBag.Title = "Success";
+}
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h2 class="m-0">Your submission was successful.</h2>
+        </div>
+        <div class="card-body">
+            Your quote amount is $@ViewBag.quoteAmount per month.<br />
+            Check your email spam folder for your personalized <a href="/Home/SignUp" target="_blank">signup</a> link and special offers!
+
+
+        </div>
+    </div>
+</div>

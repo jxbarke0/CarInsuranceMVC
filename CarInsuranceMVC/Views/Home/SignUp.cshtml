@@ -1,0 +1,39 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h3>Sign up for our service today by completing the fields below.</h3>
+            <h4>Please have your current license, 1-5000 years of driving history, and ritual sacrifice on hand. We will contact you by phone within 30 seconds of form submission.</h4>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("SignUp", "Home", FormMethod.Post))
+            {
+                <div class="row no-gutters">
+                    <div class="form-group col-md-6">
+                        <label>First Name: <input name="FirstName" type="text" class="form-control" placeholder="First Name" /></label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Last Name: <input name="LastName" type="text" class="form-control" placeholder="Last Name" /></label>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Email Address: <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" /></label>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Social Security or Human Identity Number: <input name="SocialSecurityNumber" type="text" class="form-control" placeholder="SSN/HIN" /></label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Home Phone Number: <input name="HomePhone" type="text" class="form-control" placeholder="Home Phone #" /></label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label>Cell Phone Number: <input name="CellPhone" type="text" class="form-control" placeholder="Cell Phone #" /></label>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label>Primary Care Physician: <input name="Doctor" type="text" class="form-control" placeholder="Primary Care Physician" /></label>
+                    </div>
+                    <div class="col-md-8">
+                        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
